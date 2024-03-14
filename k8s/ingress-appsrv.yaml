@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: groebl
+spec:
+#  entryPoints:
+#    - websecure
+  routes:
+  - kind: Rule
+    match: Host(`groebl.cloud.key.fit`)
+    services:
+    - name: appsrv
+      port: 80
+#  tls:
+#    secretName: default-ingress-cert
