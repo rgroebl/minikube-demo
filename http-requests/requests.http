@@ -1,0 +1,11 @@
+### hello
+
+GET http://localhost:8080/hello
+Content-Type: */*
+
+### find all vehicles
+
+GET http://localhost:8080/vehicle
+Content-Type: application/json
+
+###
