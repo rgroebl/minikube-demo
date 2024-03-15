@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appsrv
+      component: appsrv
   template:
     metadata:
       labels:
-        app: appsrv
+        component: appsrv
     spec:
       initContainers:
         - name: check-db-ready
@@ -37,7 +37,7 @@ metadata:
 spec:
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 80
       protocol: TCP
   selector:
     component: appsrv
